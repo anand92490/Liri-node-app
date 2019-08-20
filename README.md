@@ -3,12 +3,6 @@
 ## Introduction
  LIRI is a _Language_ Interpretation and Recognition Interface. LIRI is a command line node app that takes in parameters and gives you back data.
 
-<<<<<<< HEAD
-=======
-## Introduction
- LIRI is a _Language_ Interpretation and Recognition Interface. LIRI is a command line node app that takes in parameters and gives you back data.
-
->>>>>>> 0b1b66b8d1930049b692bc9f659083d7c6dae1ce
  LIRI will search Spotify for songs, Bands in Town for concerts, and OMDB for movies.
 
  ## API's
@@ -17,11 +11,7 @@
  2. OMBD
  3. Spotify
 
-<<<<<<< HEAD
-###Before you get started, make sure you have these node packages installed:
-=======
-#### Before you get started, make sure you have these node packages installed:
->>>>>>> 0b1b66b8d1930049b692bc9f659083d7c6dae1ce
+### Before you get started, make sure you have these node packages installed:
 
 1. Dotenv: Dotenv is a zero-dependency module that loads environment variables from a .env file into process.env. Storing configuration in the environment separate from code is based on The Twelve-Factor App methodology.
 
@@ -39,7 +29,11 @@ Command Line: 'npm install moment'
 
 (npm i request)
 
-<<<<<<< HEAD
+## How to run the command
 
-=======
->>>>>>> 0b1b66b8d1930049b692bc9f659083d7c6dae1ce
+1. spotify-this songname
+
+    ![](Assets/spotify-this-song.png)
+
+2. movie-this moviename
+    ![](Assets/movie-this.png)
