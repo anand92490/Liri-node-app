@@ -12,23 +12,20 @@ const spotify = new Spotify(keys.spotify);
 let liriInput = process.argv[2];
 let value = process.argv.slice(3).join("");
 
+
+
 switch (liriInput) {
   case "concert-this":
     concertThis(value);
     break;
 
-
   case "spotify-this-song":
     spotifyThisSong(value);
     break;
 
-
-
   case "movie-this":
     movieThis(value);
     break;
-
-
 
   case "do-what-it-says":
     doWhatItSays(value);
@@ -39,7 +36,7 @@ switch (liriInput) {
 function concertThis(value) {
   if (value === "") {
 
-    console.log("\nPlease enter the name of the artist of your choice");
+    console.log("\nPlease enter the name of the artist go get the concert Information");
 
   } else {
     axios.get("https://rest.bandsintown.com/artists/" + value + "/events?app_id=codingbootcamp")
@@ -52,10 +49,10 @@ function concertThis(value) {
 
 
             console.log("\n-------------------------------\n" +
-              // "\nArtist/Band:" + response.data[i].lineup[0]+
+              "\nArtist/Band:" + response.data[i].lineup[0] +
               "\nName: " + response.data[i].venue.name +
               "\nLocation: " + response.data[i].venue.city +
-              "\nEvent: Date" + moment(response.data[i].datetime, format("MM/DD/YYYY")));
+              "\nEvent Date :" + moment(response.data[i].datetime).format("MMM Do YY"));
 
           }
         }
@@ -66,7 +63,6 @@ function concertThis(value) {
 
   }
 }
-
 
 
 
@@ -90,16 +86,11 @@ function spotifyThisSong(value) {
         console.log(spotifyResults);
       }
 
-
-
     })
     .catch(function (err) {
       console.log(err);
     });
 };
-
-
-
 
 
 
@@ -130,16 +121,16 @@ function movieThis(value) {
 
 
 
-function doWhatItSays(value) {
-  fs.readFile("random.txt", "utf8", function(error, data){
-    if (error){
+function doWhatItSays() {
+  fs.readFile("random.txt", "utf8", function (error, data) {
+    if (error) {
       return console.log(error);
     }
 
     console.log(data);
     var dataArr = data.split(",");
     spotifyThisSong((dataArr[0], dataArr[1]));
-   
+
   });
 
 }

@@ -1,7 +1,10 @@
 # Liri-node-app
 
+
 ## Introduction
  LIRI is a _Language_ Interpretation and Recognition Interface. LIRI is a command line node app that takes in parameters and gives you back data.
+
+ ## What can Liri do
 
  LIRI will search Spotify for songs, Bands in Town for concerts, and OMDB for movies.
 
@@ -10,6 +13,30 @@
  1. Bands in town
  2. OMBD
  3. Spotify
+
+
+ ## How to use Liri
+
+Clone this repository. Navigate into you liri.js file on your Terminal/Bash and run the commands listed below to access information. 
+* Please follow the instruction listed on **Before you get started**
+
+1. concert-this
+
+    ![](Assets/concert-this.png)
+
+
+2. spotify-this songname
+
+    ![](Assets/spotify-this-song.png)
+
+3. movie-this moviename
+
+    ![](Assets/movie-this.png)
+
+4. do-what-it-says
+
+    ![](Assets/do-what-it-says.png)
+
 
 ### Before you get started, make sure you have these node packages installed:
 
@@ -29,16 +56,5 @@ Command Line: 'npm install moment'
 
 (npm i request)
 
-## How to run the command
 
-1. spotify-this songname
-
-    ![](Assets/spotify-this-song.png)
-
-2. movie-this moviename
-
-    ![](Assets/movie-this.png)
-
-3. do-what-it-says
-
-    ![](Assets/do-what-it-says.png)
+_________________________________________________________________________________________
