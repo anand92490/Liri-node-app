@@ -1,5 +1,5 @@
 
- require("dotenv").config();
+require("dotenv").config();
 const keys = require("./keys.js");
 
 const fs = require('fs');
@@ -9,86 +9,70 @@ const moment = require('moment')
 const Spotify = require("node-spotify-api")
 const spotify = new Spotify(keys.spotify);
 
-const liriInput = process.argv[2];
-const theInput = process.argv.slice(3).join('');
+let liriInput = process.argv[2];
+let value = process.argv.slice(3).join("");
 
-
-
-switch(liriInput){
+switch (liriInput){
     case "concert-this":
-        concertThis()
+        concertThis(value);
     break;
 
 
     case "spotify-this-song":
+      spotifyThisSong(value);
     break;
 
 
 
     case "movie-this":
+        movieThis(value);
     break;
 
 
 
     case "do-what-it-says":
+      doWhatItSays(value);
     break;
+};
+
+function concertThis(){
+  console.log("concert this");
+};
+
+function spotifyThisSong(){
+  console.log("spotify this song")
+};
+
+
+
+
+function movieThis(value){
+if ( value === null ){
+  value = "mr nobody";
 }
 
-var movieName = process.argv[4];
-
-
-var queryUrl = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=trilogy";
-
-console.log(queryUrl);
-
-axios.get(queryUrl).then(
-  function(response) {
-    console.log("Year the movie came out: " + response.data.Year);
-    console.log("IMDB Rating of the movie: " + response.data.imdbRating);
-    console.log("Rotten Tomatoes Rating of the movie: " + response.data.Ratings[1].value);
-    console.log("Country where the movie was produced: " + response.data.Country);
-    console.log("Language of the movie: " + response.data.Language);
-    console.log("Plot of the movie: " + response.data.Plot);
-    console.log("Actors in the movie: " + response.data.Actors);
-
-
-
+axios.get("https://www.omdbapi.com/?t=" + value + "&y=&plot=short&apikey=trilogy")
+.then(function(response) {
+    console.log("\n------------------------------------------------------------------------------------------------\n" 
+    + "\nTitle: " + response.data.Title + 
+    "\nYear: " + response.data.Year +
+    "\nRotten Tomatoes Rating: " + response.data.Ratings[1].value +
+    "\nCountry: " + response.data.Country +  
+    "\nLanguage: " + response.data.Language +
+    "\nPlot: " + response.data.Plot +
+    "\nActors: " + response.data.Actors +
+    "\n------------------------------------------------------------------------------------------------\n" )
+ 
+    
   })
   .catch(function(error) {
-    if (error.response.data) {
-      console.log("---------------Data---------------");
-      console.log(error.response.data);
-      console.log("---------------Status---------------");
-      console.log(error.response.status);
-      console.log("---------------Status---------------");
-      console.log(error.response.headers);
-    } else if (error.request) {
-      console.log(error.request);
-    } else {
-      console.log("Error", error.message);
-    }
-    console.log(error.config);
+ console.log(`Sorry boss!! That movie doesn't exist on our Database\n ${error}`);
   });
+};
 
 
 
-
-
-
-// function concertThis(){
-//     const artist = "";
-//     const artist = process.argv[4];
-
-
-// let  queryURL = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp"
-// axios.get(queryURL).then(function(bandResponse){
-
-//     console.log("Venue: " + bandResponse.data[0].venue.name);
-//     console.lgo("Venue Location: " + bandResponse.data[0].venue.city);
-//     console.log("On :" + moment(bandResponse.data[0].datetime).format(MM/DD/YYYY));
-// });
-// }
-
-//create a variable to store the input data
-
+function doWhatItSays(){
+  console.log("what does the page say");
+}
 
