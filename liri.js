@@ -69,6 +69,7 @@ function concertThis(value) {
 
 
 
+
 function spotifyThisSong(value) {
   // console.log("spotify is good!")
   if (value === "") {
@@ -129,7 +130,17 @@ function movieThis(value) {
 
 
 
-function doWhatItSays() {
-  console.log("what does the page say");
+function doWhatItSays(value) {
+  fs.readFile("random.txt", "utf8", function(error, data){
+    if (error){
+      return console.log(error);
+    }
+
+    console.log(data);
+    var dataArr = data.split(",");
+    spotifyThisSong((dataArr[0], dataArr[1]));
+   
+  });
+
 }
 

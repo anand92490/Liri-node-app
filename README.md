@@ -36,4 +36,9 @@ Command Line: 'npm install moment'
     ![](Assets/spotify-this-song.png)
 
 2. movie-this moviename
+
     ![](Assets/movie-this.png)
+
+3. do-what-it-says
+
+    ![](Assets/do-what-it-says.png)
