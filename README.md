@@ -2,7 +2,7 @@
 
 
 ## Introduction
- LIRI is a _Language_ Interpretation and Recognition Interface. LIRI is a command line node app that takes in parameters and gives you back data.
+LIRI is a _Language_ Interpretation and Recognition Interface. LIRI is a command line node app that takes in parameters and gives you    back data.
 
  ## What can Liri do
 
@@ -20,41 +20,41 @@
 Clone this repository. Navigate into you liri.js file on your Terminal/Bash and run the commands listed below to access information. 
 * Please follow the instruction listed on **Before you get started**
 
-1. concert-this
+1.  concert-this
 
     ![](Assets/concert-this.png)
 
 
-2. spotify-this songname
+2.  spotify-this songname
 
     ![](Assets/spotify-this-song.png)
 
-3. movie-this moviename
+3.  movie-this moviename
 
     ![](Assets/movie-this.png)
 
-4. do-what-it-says
+4.  do-what-it-says
 
     ![](Assets/do-what-it-says.png)
 
 
 ### Before you get started, make sure you have these node packages installed:
 
-1. Dotenv: Dotenv is a zero-dependency module that loads environment variables from a .env file into process.env. Storing configuration in the environment separate from code is based on The Twelve-Factor App methodology.
+1. Dotenv: Dotenv is a zero-dependency module that loads environment variables from a .env file into process.env. Storing configuration in    the environment separate from code is based on The Twelve-Factor App methodology.
 
-Command Line: 'npm install dotenv'
+   Command Line: 'npm install dotenv'
 
 2. Request: - Request is designed to be the simplest way possible to make http calls. It supports HTTPS and follows redirects by default.
 
-Command Line: 'npm install request'
+   Command Line: 'npm install request'
 
 3. Moment: - A lightweight JavaScript date library for parsing, validating, manipulating, and formatting dates.
 
-Command Line: 'npm install moment'
+   Command Line: 'npm install moment'
 
 4. Fs: - a built in node package
 
-(npm i request)
+   (npm i request)
 
 
 _________________________________________________________________________________________
