@@ -17,7 +17,7 @@ LIRI is a _Language_ Interpretation and Recognition Interface. LIRI is a command
 
  ## How to use Liri
 
-Clone this repository. Navigate into you liri.js file on your Terminal/Bash and run the commands listed below to access information. 
+Clone this repository. Navigate into you liri.js file on your Terminal/Bash and run the commands listed below to access the information. 
 * Please follow the instruction listed on **Before you get started**
 
 1.  concert-this
