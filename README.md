@@ -18,8 +18,31 @@ LIRI is a _Language_ Interpretation and Recognition Interface. LIRI is a command
  ## How to use Liri
 
 Clone this repository. Navigate into you liri.js file on your Terminal/Bash and run the commands listed below to access the information. 
-* Please follow the instruction listed on **Before you get started**
 
+### Before you get started, make sure you have these node packages installed:
+
+1. Dotenv: Dotenv is a zero-dependency module that loads environment variables from a .env file into process.env. Storing configuration in    the environment separate from code is based on The Twelve-Factor App methodology.
+
+   Command Line: 'npm i dotenv'
+
+2. axios: Promise based HTTP client for the browser and node.js
+   Command Line: 'npm i axios'   
+
+3. Moment: A lightweight JavaScript date library for parsing, validating, manipulating, and formatting dates.
+
+   Command Line: 'npm install moment'
+   
+4. Spotify: A simple to use API library for the Spotify REST API.
+
+   Command Line: npm install --save node-spotify-api
+
+5. Fs: A built in node package
+
+   (npm i request)
+   
+   
+   ## Screenshots
+   
 1.  concert-this
 
     ![](Assets/concert-this.png)
@@ -38,23 +61,4 @@ Clone this repository. Navigate into you liri.js file on your Terminal/Bash and 
     ![](Assets/do-what-it-says.png)
 
 
-### Before you get started, make sure you have these node packages installed:
 
-1. Dotenv: Dotenv is a zero-dependency module that loads environment variables from a .env file into process.env. Storing configuration in    the environment separate from code is based on The Twelve-Factor App methodology.
-
-   Command Line: 'npm install dotenv'
-
-2. Request: - Request is designed to be the simplest way possible to make http calls. It supports HTTPS and follows redirects by default.
-
-   Command Line: 'npm install request'
-
-3. Moment: - A lightweight JavaScript date library for parsing, validating, manipulating, and formatting dates.
-
-   Command Line: 'npm install moment'
-
-4. Fs: - a built in node package
-
-   (npm i request)
-
-
-_________________________________________________________________________________________
